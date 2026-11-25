@@ -46,3 +46,9 @@ One change at a time, seed fixed where possible. Evidence = runs.jsonl entries o
 - **Change:** Measured mean level during speech and during the pauses between lines (real narration, chosen score), at three score levels before ducking.
 - **Result:** 0 dB: speech -18.6 dB, pauses -14.5 dB, so the music swelled 4.1 dB louder than the voice between lines. -8 dB: pauses 1.8 dB below speech. -12 dB: pauses 5.2 dB below speech. The ACE-Step track is mastered loud (-12.5 LUFS) and ducking only acts while the voice is present.
 - **Decision:** `music.gain_db = -12` in the storyboard (a creative setting, so it lives in the contract) plus ducking. Final loudness ceiling lowered to -1.5 dB true peak; measured peak -1.5 dB, inside the brief's -1 dB limit.
+
+## E07: Choosing the score among 3 ACE-Step candidates (2026-11-25, music)
+- **Hypothesis:** Of three seeds with the same caption and bpm, the calmest one will sit best under the narration.
+- **Change:** Generated seeds 1-3 on a Colab L4 (about 4 s per 85 s track, logged in runs.jsonl), listened to each against the film.
+- **Result:** I chose seed 2 because it feels calmer and leaves room for the voice. Measured for comparison: loudness -14.2 / -12.5 / -11.6 LUFS and loudness range 4.7 / 3.5 / 2.6 LU for seeds 1 / 2 / 3. Seed 2 is not the quietest, and simple measures of busyness did not separate the candidates clearly, so the choice rests on listening, not on level.
+- **Decision:** Seed 2. Its level is set by `music.gain_db` (E06), not by the candidate.

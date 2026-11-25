@@ -120,7 +120,7 @@
       "characters": ["robel"],
       "keyframe_prompt": "close-up of the young man in his olive-green hoodie, smiling, holding a tiny white ceramic coffee cup without a handle in both hands, inside a warm lamp-lit apartment, friends sitting on the floor softly out of focus behind him, warm golden lamp light",
       "motion_prompt": "he looks up and smiles, steam rises, very slow push-in",
-      "seed": 210,
+      "seed": 310,
       "lines": [{"speaker": "narrator", "text": "If you're leaving home, pack the coffee. Then find your people.", "subtitle": "If you're leaving home, pack the coffee. Then find your people."}]
     }
   ],
