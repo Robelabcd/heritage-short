@@ -10,7 +10,7 @@
     "style_block": "Warm hand-painted gouache illustration, visible brush texture, soft paper grain, gentle natural light, cinematic composition with the main subject centred in the frame",
     "characters": {
       "robel": "a young Ethiopian man in his mid-twenties with short black curly hair and warm brown skin, wearing a plain olive-green hoodie",
-      "jebena": "a traditional Ethiopian jebena: a round-bellied black clay coffee pot with a long narrow neck, a short spout and a handle joining the neck to the body"
+      "jebena": "a traditional Ethiopian jebena: a round-bellied black clay coffee pot with a long narrow neck, a short spout and a handle joining the neck to the body, resting on a small woven straw ring"
     },
     "reference_seeds": {"robel": 2, "jebena": 3}
   },
@@ -33,7 +33,7 @@
       "id": "s01", "act": 1, "duration_s": 7, "shot_size": "extreme wide",
       "reason": "Establishes the place and states the film's theme in its first line.",
       "characters": [],
-      "keyframe_prompt": "Addis Ababa at dawn seen from a hillside, eucalyptus trees in the foreground, low houses with tin roofs, mountains in the distance, thin smoke rising from homes, warm amber morning light",
+      "keyframe_prompt": "Addis Ababa at dawn seen from the Entoto hills, tall eucalyptus trees in the foreground, below them a modern African capital city: wide boulevards lined with palm trees, glass and concrete high-rise buildings, blue-and-white minibus taxis, the city waking up, warm amber morning light, soft haze",
       "motion_prompt": "slow push-in, light mist drifting, smoke rising gently",
       "seed": 101,
       "lines": [{"speaker": "narrator", "text": "In Addis Ababa, nobody drinks coffee alone.", "subtitle": "In Addis Ababa, nobody drinks coffee alone."}]
@@ -51,7 +51,7 @@
       "id": "s03", "act": 1, "duration_s": 10, "shot_size": "medium",
       "reason": "Shows what I will lose, the circle and the conversation, and names the three rounds that structure the film.",
       "characters": ["robel", "jebena"],
-      "keyframe_prompt": "the young man sits laughing with family and neighbors around a low table with small handleless coffee cups and the jebena, fresh grass scattered on the floor, the others seen from behind or softly out of focus, warm amber light",
+      "keyframe_prompt": "a traditional Ethiopian coffee ceremony at home: family and neighbors sitting close together on low wooden stools and on a floor strewn with fresh green grass, a rekebot (a low wooden tray) holding small white handleless cups, the jebena resting on a straw ring beside a small charcoal brazier, a thin line of incense smoke, a bowl of popcorn; the young man sits among them laughing, the only young man in the scene, the others seen from behind or softly out of focus, warm amber light",
       "motion_prompt": "people lean in and laugh, steam rises from the cups, slow gentle pan",
       "seed": 103,
       "lines": [{"speaker": "narrator", "text": "Three rounds: abol, tona, baraka. And between them, we talk about everything.", "subtitle": "Three rounds: abol, tona, baraka. And between them, we talk about everything."}]
@@ -78,7 +78,7 @@
       "id": "s06", "act": 2, "duration_s": 8, "shot_size": "medium close-up",
       "reason": "The low point: stress carried alone, the opposite of the coffee circle.",
       "characters": ["robel"],
-      "keyframe_prompt": "the young man at a small desk late at night, laptop light on his tired face, textbooks and papers piled up, a dark window behind him, cool blue-grey light",
+      "keyframe_prompt": "the young man sitting alone at a small desk late at night, only one person in the room, laptop light on his tired face, textbooks and papers piled up, a dark window behind him, cool blue-grey light",
       "motion_prompt": "he rubs his eyes and leans back, slow push-in",
       "seed": 106,
       "lines": [{"speaker": "narrator", "text": "When it got hard, I carried it alone. Like an adult, I thought.", "subtitle": "When it got hard, I carried it alone. Like an adult, I thought."}]
@@ -87,7 +87,7 @@
       "id": "s07", "act": 2, "duration_s": 9, "shot_size": "close-up",
       "reason": "The turn: my mother's proverb names what I was missing.",
       "characters": ["robel"],
-      "keyframe_prompt": "the young man holding a phone to his ear in a dark room, the screen glow on his face, cool blue light with a small warm glow from the phone",
+      "keyframe_prompt": "the young man alone in a dark bedroom at midnight, holding a smartphone to his ear with his eyes closed, the glow of the phone screen on his face, only one person in the frame, cool blue light with a small warm glow from the phone",
       "motion_prompt": "he closes his eyes and listens, static camera",
       "seed": 107,
       "lines": [
@@ -108,7 +108,7 @@
       "id": "s09", "act": 3, "duration_s": 8, "shot_size": "medium",
       "reason": "Baraka, the blessing: the circle rebuilt with new people, echoing the first line.",
       "characters": ["robel", "jebena"],
-      "keyframe_prompt": "the young man pouring coffee from the jebena into small cups for four classmates from different countries sitting on the floor of a small apartment, talking and laughing, warm golden lamp light",
+      "keyframe_prompt": "a wide view from slightly above of a small apartment living room: five graduate students from different countries sitting in a circle on the floor around a rekebot, a low wooden tray with small white handleless cups, everyone the same size and equally lit, talking and laughing; the young man kneels as one of the circle, pouring coffee from the jebena into the small cups, warm golden lamp light",
       "motion_prompt": "he pours slowly, friends lean in and laugh, slow orbit",
       "seed": 109,
       "lines": [{"speaker": "narrator", "text": "My friends come from five countries. Now none of us drinks coffee alone.", "subtitle": "My friends come from five countries. Now none of us drinks coffee alone."}]
@@ -117,7 +117,7 @@
       "id": "s10", "act": 3, "duration_s": 7, "shot_size": "close-up",
       "reason": "The resolution, and the one thing I want viewers to do.",
       "characters": ["robel"],
-      "keyframe_prompt": "close-up of the young man smiling, holding a small coffee cup with both hands, friends softly out of focus behind him, warm golden light",
+      "keyframe_prompt": "close-up of the young man smiling, holding a small white handleless coffee cup with both hands, friends sitting on the floor softly out of focus behind him, warm golden lamp light",
       "motion_prompt": "he looks up and smiles, steam rises, very slow push-in",
       "seed": 110,
       "lines": [{"speaker": "narrator", "text": "If you're leaving home, pack the coffee. Then find your people.", "subtitle": "If you're leaving home, pack the coffee. Then find your people."}]

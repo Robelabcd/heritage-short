@@ -15,3 +15,28 @@ One change at a time, seed fixed where possible. Evidence = runs.jsonl entries o
 - **Change:** Smoke test prompt named the object only (seed 42, 512x512).
 - **Result:** It drew a Western-style terracotta jug with a wide mouth (outputs/smoke/image.jpg). The model does not know the object by name.
 - **Decision:** Describe the shape instead (round belly, long narrow neck, short spout, handle from neck to body, black clay) and store it once in `style.characters.jebena`, so every shot that shows it uses the same description. To be verified in the keyframe stage.
+- **E01 result:** With the shape described, all 4 jebena reference candidates showed a round-bellied black clay pot with a long neck, spout, handle and straw ring. Description works where the name does not.
+
+## E02: A two-view reference sheet produces two people (2026-11-25, keyframes)
+- **Hypothesis:** A reference sheet showing the character from the front and in three-quarter view gives the model more identity information.
+- **Change:** v1 references were two-view sheets; keyframes were conditioned on them.
+- **Result:** s03, s06 and s07 each showed two copies of me side by side. The model copied the sheet's layout, not just the face.
+- **Decision:** References are one single three-quarter view. In v2, every shot that shows me shows exactly one of me.
+
+## E03: My first Addis prompt encoded a stereotype (2026-11-25, keyframes)
+- **Hypothesis:** "a hillside, low houses with tin roofs" describes Addis Ababa.
+- **Change:** v1 used that wording.
+- **Result:** The model drew a poor rural village. My own review: it looks nothing like my city.
+- **Decision:** Describe the city as it is: the view from Entoto, eucalyptus, palm-lined boulevards, glass high-rises, blue-and-white minibuses. v2 s01 is a recognisable modern capital. Lesson: the model amplifies whatever the prompt implies, so a cultural insider has to review the prompts.
+
+## E04: Without details, the model drew a Western coffee break (2026-11-25, keyframes)
+- **Hypothesis:** "a coffee ceremony" is enough context.
+- **Change:** v1 s03 and s09 named the ceremony but not its objects.
+- **Result:** Tables, mugs, metal coffee pots and paper cups. My comment: "we don't drink coffee like that."
+- **Decision:** Describe the objects and the posture: low stools and the floor, fresh grass, a rekebot tray with small handleless cups, the jebena on a straw ring by a charcoal brazier, incense, popcorn. v2 s03 shows the real ceremony.
+
+## E05: A single-person reference erases the group (2026-11-25, keyframes)
+- **Hypothesis:** Conditioning every shot I appear in on my reference keeps me consistent.
+- **Change:** v2 s09 (me pouring coffee for four friends) used my reference.
+- **Result:** Only I appeared, standing alone in a living room. The reference outweighed "five students in a circle".
+- **Decision:** No identity reference for wide group shots; describe me in words (hair, olive-green hoodie). In a wide shot the clothes carry the identity.

@@ -27,9 +27,9 @@ CANDIDATE_SEEDS = (1, 2, 3, 4)
 
 def reference_prompt(storyboard, name):
     description = storyboard["style"]["characters"][name]
-    return (f"{storyboard['style']['style_block']}. Reference sheet: {description}, "
-            "shown from the front and from a three-quarter angle side by side, "
-            "plain warm paper background, nothing else in the frame")
+    return (f"{storyboard['style']['style_block']}. Character reference: {description}. "
+            "One single three-quarter view, alone and centred on a plain warm paper "
+            "background, nothing else in the frame")
 
 
 def keyframe_prompt(storyboard, shot):
@@ -37,6 +37,7 @@ def keyframe_prompt(storyboard, shot):
     parts = [storyboard["style"]["style_block"]]
     parts += [storyboard["style"]["characters"][c] for c in shot["characters"]]
     parts.append(shot["keyframe_prompt"])
+    parts.append("Painted in the same hand-painted gouache illustration style as the rest of the film")
     return ". ".join(parts)
 
 
