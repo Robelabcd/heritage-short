@@ -42,7 +42,7 @@
       "id": "s02", "act": 1, "duration_s": 8, "shot_size": "close-up",
       "reason": "Introduces the motif through smell and ritual; my mother is present only as her hands.",
       "characters": [],
-      "keyframe_prompt": "close-up of a woman's hands, the sleeves of a white cotton dress with an embroidered border, roasting green coffee beans in a flat iron pan over a small charcoal stove, fragrant smoke curling up, warm amber light",
+      "keyframe_prompt": "close-up of an Ethiopian woman's warm brown hands, the sleeves of her white cotton habesha dress with a woven coloured border, roasting green coffee beans in a flat iron pan over glowing charcoal in a small clay brazier, fragrant smoke curling up, warm amber light",
       "motion_prompt": "hands gently shake the pan, smoke curls upward, static camera",
       "seed": 102,
       "lines": [{"speaker": "narrator", "text": "My mother roasts the beans, and the smoke calls the neighbors in.", "subtitle": "My mother roasts the beans, and the smoke calls the neighbors in."}]
@@ -60,7 +60,7 @@
       "id": "s04", "act": 1, "duration_s": 8, "shot_size": "insert",
       "reason": "The decision to leave: I carry home with me, but not what matters most.",
       "characters": ["jebena"],
-      "keyframe_prompt": "an open suitcase on a bed with folded clothes, a small cloth bag of coffee beans and the jebena tucked between them, warm amber evening light from a window",
+      "keyframe_prompt": "an open suitcase on a bed with folded clothes, a plain unmarked cloth bag of coffee beans and the jebena tucked between them, warm amber evening light from a window",
       "motion_prompt": "very slow push-in, a curtain moves slightly",
       "seed": 104,
       "lines": [{"speaker": "narrator", "text": "When I left to study abroad, I packed the coffee. Not the people.", "subtitle": "When I left to study abroad, I packed the coffee. Not the people."}]
@@ -107,8 +107,8 @@
     {
       "id": "s09", "act": 3, "duration_s": 8, "shot_size": "medium",
       "reason": "Baraka, the blessing: the circle rebuilt with new people, echoing the first line.",
-      "characters": ["robel", "jebena"],
-      "keyframe_prompt": "a wide view from slightly above of a small apartment living room: five graduate students from different countries sitting in a circle on the floor around a rekebot, a low wooden tray with small white handleless cups, everyone the same size and equally lit, talking and laughing; the young man kneels as one of the circle, pouring coffee from the jebena into the small cups, warm golden lamp light",
+      "characters": ["jebena"],
+      "keyframe_prompt": "a wide view from slightly above of a small apartment living room: five graduate students from different countries sitting in a circle on the floor around a rekebot, a low wooden tray with small white handleless cups, everyone the same size and equally lit, talking and laughing; one of them, a young Ethiopian man with short black curly hair in an olive-green hoodie, kneels as one of the circle, pouring coffee from the jebena into the small cups, warm golden lamp light",
       "motion_prompt": "he pours slowly, friends lean in and laugh, slow orbit",
       "seed": 109,
       "lines": [{"speaker": "narrator", "text": "My friends come from five countries. Now none of us drinks coffee alone.", "subtitle": "My friends come from five countries. Now none of us drinks coffee alone."}]
@@ -117,9 +117,9 @@
       "id": "s10", "act": 3, "duration_s": 7, "shot_size": "close-up",
       "reason": "The resolution, and the one thing I want viewers to do.",
       "characters": ["robel"],
-      "keyframe_prompt": "close-up of the young man smiling, holding a small white handleless coffee cup with both hands, friends sitting on the floor softly out of focus behind him, warm golden lamp light",
+      "keyframe_prompt": "close-up of the young man in his olive-green hoodie, smiling, holding a tiny white ceramic coffee cup without a handle in both hands, inside a warm lamp-lit apartment, friends sitting on the floor softly out of focus behind him, warm golden lamp light",
       "motion_prompt": "he looks up and smiles, steam rises, very slow push-in",
-      "seed": 110,
+      "seed": 210,
       "lines": [{"speaker": "narrator", "text": "If you're leaving home, pack the coffee. Then find your people.", "subtitle": "If you're leaving home, pack the coffee. Then find your people."}]
     }
   ],

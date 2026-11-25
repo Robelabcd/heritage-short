@@ -15,3 +15,10 @@ __pycache__/
 tmp/
 
 # Note: runs.jsonl and outputs/ ARE committed on purpose (graded evidence).
+
+# Assembly intermediates and renders: rebuilt by `make assemble` in about a minute
+outputs/segments/
+outputs/film/
+
+# Music candidates stay local; only the chosen score (outputs/music/score.wav) is committed
+outputs/music/candidates/

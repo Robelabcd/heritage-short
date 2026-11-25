@@ -16,3 +16,6 @@
 | 2026-11-25 | Narrator voice Achird (male), mother's line Sulafat (female) | The narrator is me; the smoke test had used a female voice by mistake |
 | 2026-11-25 | Primary format 9:16 | My audience watches on phones in vertical feeds |
 | 2026-11-25 | s03 lengthened from 8 s to 10 s | Measured narration ran 1.6 s past the shot (the voice pauses around "abol, tona, baraka"); the timeline check flagged it |
+| 2026-11-25 | Assembly built before the video and music stages | Guarantees a complete film tonight: pan-and-zoom on keyframes and a placeholder score, replaced automatically when Wan clips and the ACE-Step score exist |
+| 2026-11-25 | 16:9 = the 9:16 picture over a blurred copy of itself | No second set of generations; subjects stay centred; subtitles laid out separately per frame |
+| 2026-11-25 | Rendered films not committed to git (rebuilt by `make assemble`) | Every re-render would add ~25 MB to the repo history; final films are shared by link |

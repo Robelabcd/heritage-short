@@ -90,7 +90,7 @@ def _split_for_cards(text, width):
     return [best[1], best[2]]
 
 
-def srt(lines, end_card, total_s, width=38):
+def srt(lines, end_card, total_s, width=38, include_end_card=True):
     """Subtitles: at most two lines of ~38 characters on screen at once, as the brief
     suggests. A longer line is split into consecutive two-line cards, with its time
     shared out in proportion to the text in each card."""
@@ -103,7 +103,8 @@ def srt(lines, end_card, total_s, width=38):
             share = (line["end"] - line["start"]) * len(chunk) / total_chars
             cards.append((t, t + share, chunk))
             t += share
-    cards.append((total_s - end_card["duration_s"], total_s, end_card["text"]))
+    if include_end_card:
+        cards.append((total_s - end_card["duration_s"], total_s, end_card["text"]))
     blocks = [f"{n}\n{_srt_time(a)} --> {_srt_time(b)}\n{text}\n"
               for n, (a, b, text) in enumerate(cards, 1)]
     return "\n".join(blocks)

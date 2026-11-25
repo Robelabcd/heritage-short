@@ -16,3 +16,7 @@ radio-cut: narration ; $(PY) -m pipeline.radio_cut
 references: validate ; $(PY) -m pipeline.keyframes references
 
 keyframes: validate ; $(PY) -m pipeline.keyframes
+
+assemble: validate ; $(PY) -m pipeline.assemble
+
+film: validate ; $(PY) -m pipeline.narration && $(PY) -m pipeline.keyframes && $(PY) -m pipeline.assemble

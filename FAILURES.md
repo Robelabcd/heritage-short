@@ -31,3 +31,8 @@
 - **What broke:** The render failed with `Unknown encoder 'libx264'`. The conda-forge FFmpeg build leaves out the GPL-licensed x264.
 - **What I tried:** Listed the encoders the build does have.
 - **What fixed it / workaround:** `video_encoder_args()` picks the first available H.264 encoder at run time (libx264, then Apple's h264_videotoolbox, then OpenH264), so the pipeline runs on any machine.
+
+## F06: 16:9 export failed: GPL filters missing from the FFmpeg build (2026-11-25, assembly)
+- **What broke:** The 9:16 film rendered, but the 16:9 export failed. First error: `No option name near '30:2'` on `boxblur`.
+- **What I tried:** First guessed a syntax change between FFmpeg versions and switched to named options. The rerun then showed the real cause: `No such filter: 'boxblur'`. The conda-forge build is LGPL-only and leaves out GPL filters (`boxblur`, `eq`), as it leaves out `libx264` (F05).
+- **What fixed it / workaround:** Replaced them with LGPL filters (`gblur`, `lutyuv`) and added a pre-flight check that lists every filter the stage needs and stops with a clear message before rendering. Lesson: read the second error before trusting the first diagnosis, and check dependencies up front.
