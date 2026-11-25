@@ -40,3 +40,9 @@ One change at a time, seed fixed where possible. Evidence = runs.jsonl entries o
 - **Change:** v2 s09 (me pouring coffee for four friends) used my reference.
 - **Result:** Only I appeared, standing alone in a living room. The reference outweighed "five students in a circle".
 - **Decision:** No identity reference for wide group shots; describe me in words (hair, olive-green hoodie). In a wide shot the clothes carry the identity.
+
+## E06: Score level under the narration (2026-11-25, assembly)
+- **Hypothesis:** Sidechain ducking alone keeps the ACE-Step score under the voice.
+- **Change:** Measured mean level during speech and during the pauses between lines (real narration, chosen score), at three score levels before ducking.
+- **Result:** 0 dB: speech -18.6 dB, pauses -14.5 dB, so the music swelled 4.1 dB louder than the voice between lines. -8 dB: pauses 1.8 dB below speech. -12 dB: pauses 5.2 dB below speech. The ACE-Step track is mastered loud (-12.5 LUFS) and ducking only acts while the voice is present.
+- **Decision:** `music.gain_db = -12` in the storyboard (a creative setting, so it lives in the contract) plus ducking. Final loudness ceiling lowered to -1.5 dB true peak; measured peak -1.5 dB, inside the brief's -1 dB limit.

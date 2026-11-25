@@ -153,11 +153,12 @@ def main():
     music_in = (["-i", "outputs/music/score.wav"] if score.exists()
                 else ["-f", "lavfi", "-i", f"aevalsrc={PLACEHOLDER}:s=48000:d={total:.2f}"])
     audio = (f"[1:a]aresample=48000,pan=stereo|c0=c0|c1=c0,asplit=2[voice][key];"
-             f"[2:a]aresample=48000,aformat=channel_layouts=stereo,apad,atrim=0:{total:.2f},"
+             f"[2:a]aresample=48000,aformat=channel_layouts=stereo,"
+             f"volume={storyboard['music'].get('gain_db', -12)}dB,apad,atrim=0:{total:.2f},"
              f"afade=t=in:d=1.5,afade=t=out:st={total - 4:.2f}:d=4[music];"
              "[music][key]sidechaincompress=threshold=0.02:ratio=6:attack=300:release=1500[ducked];"
              "[voice][ducked]amix=inputs=2:duration=first:normalize=0,"
-             "loudnorm=I=-14:TP=-1:LRA=11[mix]")
+             "loudnorm=I=-14:TP=-1.5:LRA=11[mix]")
 
     # 3. Both aspect ratios, each with subtitles laid out for its own frame.
     versions = {

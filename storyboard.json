@@ -22,6 +22,7 @@
     "caption": "slow warm instrumental underscore, Ethiopian krar and soft piano with gentle strings, intimate and nostalgic, sparse texture that leaves room for a narrator",
     "bpm": 70,
     "instrumental": true,
+    "gain_db": -12,
     "cues": [
       {"from_shot": "s01", "to_shot": "s04", "feel": "warm, gently rising; introduces the theme"},
       {"from_shot": "s05", "to_shot": "s07", "feel": "sparse and cold, almost silent piano"},
