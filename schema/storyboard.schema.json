@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Storyboard",
+  "description": "The contract between every pipeline stage. Each stage reads this file and nothing else.",
+  "type": "object",
+  "required": ["title", "logline", "format", "style", "voices", "music", "shots", "end_card"],
+  "additionalProperties": false,
+  "properties": {
+    "title": {"type": "string", "minLength": 1},
+    "logline": {"type": "string", "minLength": 1},
+    "format": {
+      "type": "object",
+      "required": ["primary_aspect", "fps", "words_per_second"],
+      "additionalProperties": false,
+      "properties": {
+        "primary_aspect": {"enum": ["9:16", "16:9"]},
+        "fps": {"type": "integer", "minimum": 12, "maximum": 30},
+        "words_per_second": {"type": "number", "minimum": 1, "maximum": 4,
+          "description": "Measured speaking rate of the narrator voice, used to check that narration fits each shot."}
+      }
+    },
+    "style": {
+      "type": "object",
+      "required": ["style_block", "characters"],
+      "additionalProperties": false,
+      "properties": {
+        "style_block": {"type": "string", "minLength": 10,
+          "description": "Fixed look description added to every keyframe prompt, so the style never drifts."},
+        "characters": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {"type": "string", "minLength": 10},
+          "description": "Character id -> fixed visual description, added to the prompt of every shot that lists the character."
+        }
+      }
+    },
+    "voices": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "required": ["voice", "style"],
+        "additionalProperties": false,
+        "properties": {
+          "voice": {"type": "string", "minLength": 1},
+          "style": {"type": "string"}
+        }
+      }
+    },
+    "music": {
+      "type": "object",
+      "required": ["caption", "bpm", "instrumental", "cues"],
+      "additionalProperties": false,
+      "properties": {
+        "caption": {"type": "string", "minLength": 10},
+        "bpm": {"type": "integer", "minimum": 40, "maximum": 200},
+        "instrumental": {"type": "boolean"},
+        "cues": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["from_shot", "to_shot", "feel"],
+            "additionalProperties": false,
+            "properties": {
+              "from_shot": {"$ref": "#/$defs/shot_id"},
+              "to_shot": {"$ref": "#/$defs/shot_id"},
+              "feel": {"type": "string", "minLength": 3}
+            }
+          }
+        }
+      }
+    },
+    "shots": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "required": ["id", "act", "duration_s", "shot_size", "reason", "characters",
+                     "keyframe_prompt", "motion_prompt", "seed", "lines"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"$ref": "#/$defs/shot_id"},
+          "act": {"enum": [1, 2, 3]},
+          "duration_s": {"type": "number", "minimum": 3, "maximum": 12},
+          "shot_size": {"enum": ["extreme wide", "wide", "medium", "medium close-up", "close-up", "extreme close-up", "insert"]},
+          "reason": {"type": "string", "minLength": 10,
+            "description": "Why this shot exists, in one sentence."},
+          "characters": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+          "keyframe_prompt": {"type": "string", "minLength": 10},
+          "motion_prompt": {"type": "string", "minLength": 5,
+            "description": "Only motion and camera: the keyframe already holds subject and place."},
+          "seed": {"type": "integer", "minimum": 0},
+          "lines": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["speaker", "text", "subtitle"],
+              "additionalProperties": false,
+              "properties": {
+                "speaker": {"type": "string", "minLength": 1},
+                "text": {"type": "string", "minLength": 1,
+                  "description": "What is spoken, in the spoken language."},
+                "subtitle": {"type": "string", "minLength": 1,
+                  "description": "What appears on screen, in English."}
+              }
+            }
+          }
+        }
+      }
+    },
+    "end_card": {
+      "type": "object",
+      "required": ["text", "duration_s"],
+      "additionalProperties": false,
+      "properties": {
+        "text": {"type": "string", "minLength": 5},
+        "duration_s": {"type": "number", "minimum": 2, "maximum": 5}
+      }
+    }
+  },
+  "$defs": {
+    "shot_id": {"type": "string", "pattern": "^s[0-9]{2}$"}
+  }
+}

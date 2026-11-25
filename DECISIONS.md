@@ -10,3 +10,8 @@
 | 2026-11-25 | English narration, one Amharic line from my mother | Reaches students from any country; keeps the heritage; subtitled |
 | 2026-11-25 | Colab Pro as main GPU, Kaggle as backup | Faster GPUs than Kaggle's free T4 for Wan 2.2; cost recorded in COSTS.md |
 | 2026-11-25 | Claude (claude.ai) as coding agent; I design and review | Stated honestly; every script explained before it was created |
+| 2026-11-25 | Storyboard checked in two layers: JSON Schema for shape, Python for meaning | A schema cannot express cross-field rules (unique ids, speakers with voices, total length, narration fitting its shot) |
+| 2026-11-25 | Narration fit checked at a measured 1.7 words/s | Measured from the smoke test (8 words in 4.8 s with the "unhurried" style), slower than the brief's 2-2.5 estimate |
+| 2026-11-25 | Recurring subjects (me, the jebena) described once in `style.characters` | One fixed description per subject keeps shots consistent; applies the E01 fix everywhere |
+| 2026-11-25 | Narrator voice Achird (male), mother's line Sulafat (female) | The narrator is me; the smoke test had used a female voice by mistake |
+| 2026-11-25 | Primary format 9:16 | My audience watches on phones in vertical feeds |
