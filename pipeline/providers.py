@@ -34,7 +34,7 @@ def _usage(interaction):
 def gemini_text(prompt, *, stage, model=TEXT_MODEL, shot=None):
     """Text in, text out (script, storyboard drafts, translation)."""
     def fn():
-        interaction = gemini_client().interactions.create(model=model, input=prompt)
+        interaction = gemini_client().interactions.create(model=model, input=prompt, timeout=90)
         return interaction.output_text, _usage(interaction)
 
     return call_model(stage=stage, provider="gemini", model=model,
@@ -51,6 +51,8 @@ def gemini_tts(text, *, stage, voice="Sulafat", style="", model=TTS_MODEL, shot=
         interaction = gemini_client().interactions.create(
             model=model,
             input=[{"type": "user_input", "content": [item]}],
+            api_version="v1beta",
+            timeout=90,
             response_format={"type": "audio"},
             generation_config={"speech_config": [{"voice": voice}]},
         )
