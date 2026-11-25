@@ -21,3 +21,13 @@
 - **What broke:** `gemini-3.8-flash-tts` returned 404 "not found… set the API version to v1beta", while the text model on the same key was reachable.
 - **What I tried:** Read the error rather than changing the model name: it said the model only exists on the newer API version.
 - **What fixed it / workaround:** Added `api_version="v1beta"` to the TTS call only (one line, smallest safe change). Both English and Amharic TTS then succeeded.
+
+## F04: TTS request hung despite timeout=90 (2026-11-25, narration)
+- **What broke:** During the narration stage, one TTS request never returned and printed nothing. The SDK's own `timeout=90` argument did not fire.
+- **What I tried:** Stopped it with Ctrl+C. The 6 lines already made were cached, so nothing was lost.
+- **What fixed it / workaround:** Added our own deadline in `call_model` (`run_with_timeout`): the call runs in a daemon thread and raises `TimeoutError` after 120 s, which is retried and logged. It no longer depends on any SDK honouring its timeout. Re-run: 5 generated, 6 reused from cache.
+
+## F05: FFmpeg had no libx264 encoder (2026-11-25, radio cut)
+- **What broke:** The render failed with `Unknown encoder 'libx264'`. The conda-forge FFmpeg build leaves out the GPL-licensed x264.
+- **What I tried:** Listed the encoders the build does have.
+- **What fixed it / workaround:** `video_encoder_args()` picks the first available H.264 encoder at run time (libx264, then Apple's h264_videotoolbox, then OpenH264), so the pipeline runs on any machine.

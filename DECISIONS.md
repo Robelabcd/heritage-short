@@ -15,3 +15,4 @@
 | 2026-11-25 | Recurring subjects (me, the jebena) described once in `style.characters` | One fixed description per subject keeps shots consistent; applies the E01 fix everywhere |
 | 2026-11-25 | Narrator voice Achird (male), mother's line Sulafat (female) | The narrator is me; the smoke test had used a female voice by mistake |
 | 2026-11-25 | Primary format 9:16 | My audience watches on phones in vertical feeds |
+| 2026-11-25 | s03 lengthened from 8 s to 10 s | Measured narration ran 1.6 s past the shot (the voice pauses around "abol, tona, baraka"); the timeline check flagged it |

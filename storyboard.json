@@ -47,7 +47,7 @@
       "lines": [{"speaker": "narrator", "text": "My mother roasts the beans, and the smoke calls the neighbors in.", "subtitle": "My mother roasts the beans, and the smoke calls the neighbors in."}]
     },
     {
-      "id": "s03", "act": 1, "duration_s": 8, "shot_size": "medium",
+      "id": "s03", "act": 1, "duration_s": 10, "shot_size": "medium",
       "reason": "Shows what I will lose, the circle and the conversation, and names the three rounds that structure the film.",
       "characters": ["robel", "jebena"],
       "keyframe_prompt": "the young man sits laughing with family and neighbors around a low table with small handleless coffee cups and the jebena, fresh grass scattered on the floor, the others seen from behind or softly out of focus, warm amber light",
