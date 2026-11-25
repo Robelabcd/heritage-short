@@ -31,6 +31,11 @@
           "minProperties": 1,
           "additionalProperties": {"type": "string", "minLength": 10},
           "description": "Character id -> fixed visual description, added to the prompt of every shot that lists the character."
+        },
+        "reference_seeds": {
+          "type": "object",
+          "additionalProperties": {"type": "integer", "minimum": 0},
+          "description": "Character id -> seed of the approved reference image (the golden reference) that every keyframe is conditioned on."
         }
       }
     },

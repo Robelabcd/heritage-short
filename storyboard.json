@@ -11,7 +11,8 @@
     "characters": {
       "robel": "a young Ethiopian man in his mid-twenties with short black curly hair and warm brown skin, wearing a plain olive-green hoodie",
       "jebena": "a traditional Ethiopian jebena: a round-bellied black clay coffee pot with a long narrow neck, a short spout and a handle joining the neck to the body"
-    }
+    },
+    "reference_seeds": {"robel": 2, "jebena": 3}
   },
   "voices": {
     "narrator": {"voice": "Achird", "style": "warm, calm and unhurried, a young man remembering"},

@@ -45,6 +45,10 @@ def check(storyboard):
             if line["speaker"] not in voices:
                 errors.append(f"{shot['id']}: unknown speaker '{line['speaker']}'")
 
+    for name in storyboard["style"].get("reference_seeds", {}):
+        if name not in characters:
+            errors.append(f"reference_seeds: unknown character '{name}'")
+
     for cue in storyboard["music"]["cues"]:
         for key in ("from_shot", "to_shot"):
             if cue[key] not in ids:

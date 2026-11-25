@@ -12,3 +12,7 @@ validate: ; $(PY) -m pipeline.validate
 narration: validate ; $(PY) -m pipeline.narration
 
 radio-cut: narration ; $(PY) -m pipeline.radio_cut
+
+references: validate ; $(PY) -m pipeline.keyframes references
+
+keyframes: validate ; $(PY) -m pipeline.keyframes

@@ -65,18 +65,25 @@ def gemini_tts(text, *, stage, voice="Sulafat", style="", model=TTS_MODEL, shot=
 
 
 def cloudflare_image(prompt, *, stage, width=1024, height=1024, seed=None,
-                     model=IMAGE_MODEL, shot=None):
-    """Text in, image bytes out, from Cloudflare Workers AI."""
+                     references=(), model=IMAGE_MODEL, shot=None):
+    """Text (+ up to 4 reference images) in, image bytes out, from Cloudflare Workers AI.
+
+    references is a list of (name, png_bytes). The model uses them to keep a
+    character or object looking the same across shots.
+    """
     account = require_env("CLOUDFLARE_ACCOUNT_ID")
     token = require_env("CLOUDFLARE_API_TOKEN")
     url = f"https://api.cloudflare.com/client/v4/accounts/{account}/ai/run/{model}"
     fields = {"prompt": prompt, "width": str(width), "height": str(height)}
     if seed is not None:
         fields["seed"] = str(seed)
+    files = {k: (None, v) for k, v in fields.items()}
+    for i, (name, data) in enumerate(list(references)[:4]):
+        files[f"input_image_{i}"] = (name, data, "image/png")
 
     def fn():
         response = requests.post(url, headers={"Authorization": f"Bearer {token}"},
-                                 files={k: (None, v) for k, v in fields.items()}, timeout=120)
+                                 files=files, timeout=120)
         if not response.ok:
             raise requests.HTTPError(f"{response.status_code}: {response.text[:300]}",
                                      response=response)
@@ -88,7 +95,8 @@ def cloudflare_image(prompt, *, stage, width=1024, height=1024, seed=None,
         return image, {"output_bytes": len(image)}
 
     return call_model(stage=stage, provider="cloudflare", model=model,
-                      params={"prompt": prompt, "width": width, "height": height},
+                      params={"prompt": prompt, "width": width, "height": height,
+                              "references": [name for name, _ in references]},
                       seed=seed, fn=fn, shot=shot)
 
 
