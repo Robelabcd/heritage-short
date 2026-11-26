@@ -52,3 +52,11 @@ One change at a time, seed fixed where possible. Evidence = runs.jsonl entries o
 - **Change:** Generated seeds 1-3 on a Colab L4 (about 4 s per 85 s track, logged in runs.jsonl), listened to each against the film.
 - **Result:** I chose seed 2 because it feels calmer and leaves room for the voice. Measured for comparison: loudness -14.2 / -12.5 / -11.6 LUFS and loudness range 4.7 / 3.5 / 2.6 LU for seeds 1 / 2 / 3. Seed 2 is not the quietest, and simple measures of busyness did not separate the candidates clearly, so the choice rests on listening, not on level.
 - **Decision:** Seed 2. Its level is set by `music.gain_db` (E06), not by the candidate.
+
+## E08: Clothing drift on s10 (accepted)
+
+- **Question:** can reseeding alone keep Robel's olive-green hoodie in the final shot?
+- **Tried:** seeds 110, 210, 310 with the same prompt and the same reference image.
+- **Result:** the reference sets the face and hair well, but the clothes still drift toward a white T-shirt in some seeds.
+- **Decision:** accepted seed 310 and stopped at three attempts. More seeds cost time for a detail that doesn't change the story.
+- **Would try next:** put the clothing first in the shot prompt, or use a reference image cropped to the torso.
