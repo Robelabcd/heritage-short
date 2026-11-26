@@ -76,3 +76,4 @@ Music ran on Colab. The same 3 scores on a hosted ACE-Step API would cost about 
 ## Notes (hand-written)
 
 - Colab compute units before the GPU work: 107.
+- Colab compute units after music + clips: 103.59, so 3.41 units used (about $0.34 at $9.99 per 100 units). The log counts 62.4 GPU minutes, about 2.42 units at 2.33 units/hour on the L4. The other ~1 unit (about 30%) is model download, loading and idle time, which runs.jsonl cannot see.
