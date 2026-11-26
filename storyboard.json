@@ -55,7 +55,7 @@
       "keyframe_prompt": "a traditional Ethiopian coffee ceremony at home: family and neighbors sitting close together on low wooden stools and on a floor strewn with fresh green grass, a rekebot (a low wooden tray) holding small white handleless cups, the jebena resting on a straw ring beside a small charcoal brazier, a thin line of incense smoke, a bowl of popcorn; the young man sits among them laughing, the only young man in the scene, the others seen from behind or softly out of focus, warm amber light",
       "motion_prompt": "people lean in and laugh, steam rises from the cups, slow gentle pan",
       "seed": 103,
-      "lines": [{"speaker": "narrator", "text": "Three rounds: abol, tona, baraka. And between them, we talk about everything.", "subtitle": "Three rounds: abol, tona, baraka. And between them, we talk about everything."}]
+      "lines": [{"speaker": "narrator", "text": "Three rounds: abol, tona, baraka. Between them: incense, gossip, and my mother's TV drama.", "subtitle": "Three rounds: abol, tona, baraka. Between them: incense, gossip, and my mother's TV drama."}]
     },
     {
       "id": "s04", "act": 1, "duration_s": 8, "shot_size": "insert",

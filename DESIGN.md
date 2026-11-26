@@ -37,7 +37,31 @@ was never about the coffee: it was about not carrying things alone.
   film's heritage and is subtitled in English.
 
 ## User test 1: radio cut
-(Step 4)
+
+**How:** 25 Nov 2026. The radio cut (narration, subtitles and a placeholder chord over a black screen, 83 s) was sent on WhatsApp to three people with five open questions. Replies are paraphrased by me from their messages, with the meaning kept. The originals are kept privately.
+
+**Testers:**
+- T1: Ethiopian MS student in the US
+- T2: high school student in Ethiopia
+- T3: Ethiopian BTech graduate, now working (knows the ceremony well)
+
+| Question | T1 | T2 | T3 |
+|---|---|---|---|
+| What was it about? | A student abroad who misses home and realises what the coffee ceremony means to them | Leaving Addis and looking back on the everyday moments that brought people together | A student far from home discovering the comfort and connection of the coffee ceremony |
+| What stayed with you? | The Amharic proverb in the mother's voice, about valuing other people | The ceremony giving everyone a chance to sit together and talk about their day | That gathering over coffee and sharing your day can help people heal |
+| Confused or bored? | No | No | No |
+| Narration | Easy to follow, natural pace | Comfortable, enough time to take it in | Easy to follow, not rushed or slow |
+| Change one thing | Add a specific memory from home | More about life abroad and how it feels different | Make one memory more vivid so we can picture it |
+
+**What we learned:**
+- 3/3 told the theme back in their own words, so the story lands without pictures.
+- The peak works: what stayed with them was the proverb, and the idea that sharing your day heals.
+- The pace is right at 1.7 words per second, so shot durations stay as they are.
+- 3/3 asked for more specific detail: two about a memory from home, one about life abroad.
+
+**What changed:** the s03 narration went from "And between them, we talk about everything." to "Between them: incense, gossip, and my mother's TV drama.": three real details from my family's ceremonies (a smell, a sound, a picture) in place of a general phrase. This re-ran one TTS call and the edit, with no image or video calls (see runs.jsonl).
+
+**Not changed yet:** more about life abroad (T2). Act 2 already spends two shots on it (s05, s06). Adding a shot would lengthen the film and blur which change caused what, so test 2 checks whether the request still stands.
 
 ## User test 2: near-final cut
 (Step 9)
