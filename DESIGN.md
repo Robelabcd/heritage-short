@@ -64,4 +64,35 @@ was never about the coffee: it was about not carrying things alone.
 **Not changed yet:** more about life abroad (T2). Act 2 already spends two shots on it (s05, s06). Adding a shot would lengthen the film and blur which change caused what, so test 2 checks whether the request still stands.
 
 ## User test 2: near-final cut
-(Step 9)
+
+**How:** 26 Nov 2026. The near-final film (9:16, with the three Wan clips) was sent on Snapchat to three new people with six open questions, to watch once on their phones. Their replies are summarised below, with short quotes in their own words; the originals are kept privately.
+
+**Testers:**
+- T4: Ethiopian BTech graduate who studied abroad, now working
+- T5: Ethiopian BTech graduate who studied abroad
+- T6: tech employee living in Saudi Arabia
+
+| Question | T4 | T5 | T6 |
+|---|---|---|---|
+| What was it about? | "finding something to reunite you with people, in this case, coffee" | The memory of home, and sharing your culture to bring people together | "The company of the people is what makes everything more beautiful" |
+| What stayed with you? | The five friends drinking coffee, and the last line | The phone call with the mother | The proverb |
+| Confused or bored? | No | Not bored (see the next row) | No |
+| Narration and music | Heard clearly | "The volume was perfect" | Clear; the music did not get in the way |
+| Anything strange or AI-ish? | The green coffee beans; "maybe use semi-roasted" | The jebena "doesn't look like jebena"; the family's clothes look Arab, one woman in a hijab; the roasting hands look like a man's, the stirring stick floats, a hand is on the hot pan; "green beans" should be "coffee beans" | Nothing |
+| Change one thing | The green coffee beans | Make the setting and clothes more accurate | Nothing; would like to join a coffee ceremony |
+
+**What we learned:**
+- 3/3 told the story back in their own words, and the peak works: the call with my mother and the proverb.
+- Sound is solved: all three heard the narration clearly.
+- Every problem was cultural accuracy, and it came from the tester who knows the ceremony best. The models got the style right and Ethiopian specifics wrong, and only someone from the culture could see it.
+
+**What changed:**
+
+| Feedback | Change | Calls |
+|---|---|---|
+| s02: a man's hands, a floating stick, a hand on the hot pan (T5); green beans look strange (T4) | A mother's hands in a habesha kemis, the stick held in one hand, the other hand away from the pan, beans turning brown | 1 image |
+| s03: clothes look Arab (T5) | Habesha kemis with tibeb borders and netela shawls. s03 goes back to a still with a slow camera move, because its Wan clip showed the old clothes | 2 images |
+| The jebena looks like a teapot (T5) | A new jebena description from a reference photo, used as words only, then three rounds of reference images (E11). The four jebena shots regenerated | 12 + 4 images |
+| "Green beans" sounds like the vegetable (T5) | s08 narration: "raw coffee beans", made live in the walkthrough | 1 TTS |
+
+**Not changed:** the s09 Wan clip still shows the old jebena; re-rendering it is about 21 GPU minutes. One woman in the background of s03 still wears a headscarf. The overall AI look (T5) is the illustration style, so it stays.
