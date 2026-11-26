@@ -60,3 +60,15 @@ One change at a time, seed fixed where possible. Evidence = runs.jsonl entries o
 - **Result:** the reference sets the face and hair well, but the clothes still drift toward a white T-shirt in some seeds.
 - **Decision:** accepted seed 310 and stopped at three attempts. More seeds cost time for a detail that doesn't change the story.
 - **Would try next:** put the clothing first in the shot prompt, or use a reference image cropped to the torso.
+
+## E09: Animate only the three emotional peaks (2026-11-25, clips)
+- **Hypothesis:** Wan 2.2 TI2V-5B can animate the keyframes at full vertical resolution on a Colab L4 without losing identity, if motion prompts stay small and the negative prompt targets faces and hands.
+- **Change:** Image-to-video for s03 (the ceremony), s07 (the midnight call) and s09 (coffee with new friends): 704x1280, 121 frames (5 s at 24 fps), 40 steps, guidance 5.0, model CPU offload and VAE tiling. All other shots keep Ken Burns moves on their keyframes.
+- **Result:** 3/3 succeeded on the first attempt: 21.1, 20.5 and 20.5 min (62 GPU min). About 17 min of each is diffusion (25 s per step); the rest is decoding and saving. Identity held: in s07 the face stays in frame for the whole proverb. The 5 s clips are slowed by up to 1.6x and hold their last frame to fill 8-10 s shots.
+- **Decision:** Motion only where the story peaks. Animating all 10 shots would cost about 3.5 GPU hours per full run; three clips gave the film movement at its three emotional beats for about one hour.
+
+## E10: Make one memory specific (2026-11-25, narration, from user test 1)
+- **Hypothesis:** Replacing a general phrase with real sensory details makes the ceremony easier to picture, without changing the film's length.
+- **Change:** s03 "And between them, we talk about everything." became "Between them: incense, gossip, and my mother's TV drama." (three details from my family's ceremonies).
+- **Result:** `make validate` estimated 8.2 s at 1.7 words per second and passed, but the real audio ran 1.0 s past the shot: the colon and commas add pauses that a word count does not see. `make assemble` measures the real audio and warned. Cut to "Incense, gossip, and my mother's TV drama.", which fits. Two TTS calls in total, zero image or video calls.
+- **Decision:** Keep the shorter line. The word-rate check is an early estimate only; the measured check at assembly is the one that counts, so both stay. Test 2 checks whether the memory now feels vivid.

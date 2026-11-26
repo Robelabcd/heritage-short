@@ -59,7 +59,7 @@ was never about the coffee: it was about not carrying things alone.
 - The pace is right at 1.7 words per second, so shot durations stay as they are.
 - 3/3 asked for more specific detail: two about a memory from home, one about life abroad.
 
-**What changed:** the s03 narration went from "And between them, we talk about everything." to "Between them: incense, gossip, and my mother's TV drama.": three real details from my family's ceremonies (a smell, a sound, a picture) in place of a general phrase. This re-ran one TTS call and the edit, with no image or video calls (see runs.jsonl).
+**What changed:** the s03 narration went from "And between them, we talk about everything." to "Incense, gossip, and my mother's TV drama.": three real details from my family's ceremonies (a smell, a sound, a picture) in place of a general phrase. This re-ran one TTS call and the edit, with no image or video calls (see runs.jsonl). The first wording, "Between them: incense, gossip, and my mother's TV drama.", ran 1.0 s past the shot. `make assemble` warned, so I cut two words (one more TTS call).
 
 **Not changed yet:** more about life abroad (T2). Act 2 already spends two shots on it (s05, s06). Adding a shot would lengthen the film and blur which change caused what, so test 2 checks whether the request still stands.
 

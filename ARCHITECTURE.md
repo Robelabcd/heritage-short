@@ -76,7 +76,7 @@ The development machine is a MacBook Air with no CUDA GPU. Music and video run o
 | references | Cloudflare Workers AI | about 10 s per image |
 | keyframes | Cloudflare Workers AI | about 7 s per image |
 | music | Colab L4, 8 steps | about 5 s per 85 s score |
-| clips | Colab L4, 40 steps, 704x1280, 121 frames | about 17 min per 5 s clip |
+| clips | Colab L4, 40 steps, 704x1280, 121 frames | about 21 min per 5 s clip (17 min diffusion, the rest decoding and saving) |
 | assemble | local ffmpeg | about 5 s per step |
 
 ## Portability checks

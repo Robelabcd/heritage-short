@@ -36,3 +36,8 @@
 - **What broke:** The 9:16 film rendered, but the 16:9 export failed. First error: `No option name near '30:2'` on `boxblur`.
 - **What I tried:** First guessed a syntax change between FFmpeg versions and switched to named options. The rerun then showed the real cause: `No such filter: 'boxblur'`. The conda-forge build is LGPL-only and leaves out GPL filters (`boxblur`, `eq`), as it leaves out `libx264` (F05).
 - **What fixed it / workaround:** Replaced them with LGPL filters (`gblur`, `lutyuv`) and added a pre-flight check that lists every filter the stage needs and stops with a clear message before rendering. Lesson: read the second error before trusting the first diagnosis, and check dependencies up front.
+
+## F07: No A100 available on Colab (2026-11-25, clips)
+- **What broke:** The Wan 2.2 notebook was planned for an A100, but Colab Pro would only connect to an L4 (24 GB).
+- **What I tried:** Asked for an A100 again; it stayed unavailable. Considered cutting the resolution to 480x832 if the L4 was too slow or ran out of memory.
+- **What fixed it / workaround:** Ran at full 704x1280 on the L4 with model CPU offload and VAE tiling. It fit in memory and took about 21 min per clip, acceptable for three clips. Lesson: plan GPU work for the hardware you can actually get, and test one clip before committing to the rest.
